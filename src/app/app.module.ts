@@ -8,19 +8,31 @@ import { QrcodeScannerCardComponent } from './components/qrcode-scanner-card/qrc
 import { QrcodeCardComponent } from './components/qrcode-card/qrcode-card.component';
 import {TooltipModule} from "ngx-bootstrap/tooltip";
 import { ProfileCardComponent } from './components/profile-card/profile-card.component';
+import {HttpClientModule} from "@angular/common/http";
+import { StatisticsCardComponent } from './components/statistics-card/statistics-card.component';
+import {ChartsModule} from "ng2-charts";
+import {FormsModule} from "@angular/forms";
+import {ToastrModule} from "ngx-toastr";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
     AppComponent,
     QrcodeScannerCardComponent,
     QrcodeCardComponent,
-    ProfileCardComponent
+    ProfileCardComponent,
+    StatisticsCardComponent
   ],
   imports: [
     BrowserModule,
     QRCodeModule,
     ZXingScannerModule,
-    TooltipModule.forRoot()
+    TooltipModule.forRoot(),
+    HttpClientModule,
+    ChartsModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

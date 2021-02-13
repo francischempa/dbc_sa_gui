@@ -1,0 +1,46 @@
+<div class="container-fluid row " style="height: 100vh">
+    <div class="col-6 bg-light" style="height: 90vh;">
+        <div class="col-12 mt-3" >
+            <div>
+                <pre><b class="text-primary">Age Chart</b></pre>
+                <div class="chart">
+                    <canvas baseChart
+                            [data]="pieChartDataAge"
+                            [labels]="pieChartLabelsAge"
+                            [chartType]="pieChartType"
+                            [options]="pieChartOptions"
+                            [plugins]="pieChartPlugins"
+                            [colors]="pieChartColorsAge"
+                            [legend]="pieChartLegend"
+                    >
+                    </canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 mt-5">
+            <div>
+                <pre><b class="text-primary">Gender Chart</b></pre>
+                <div class="chart">
+                    <canvas baseChart
+                            [data]="pieChartDataGender"
+                            [labels]="pieChartLabelsGender"
+                            [chartType]="pieChartType"
+                            [options]="pieChartOptions"
+                            [plugins]="pieChartPlugins"
+                            [colors]="pieChartColorsGender"
+                            [legend]="pieChartLegend"
+                    >
+                    </canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 bg-light" style="height: 90vh; border-left: 10px solid white; overflow-y: scroll">
+<pre>
+
+    <b>Members present <span class="text-primary">{{current_date}} Church Service</span></b>
+<span *ngFor="let member of members_present; let i = index">    {{(i+1) + "."}} {{member.per_FirstName + " " + member.per_LastName +"    " }} <span class="text-info">{{member['person_temp']}}</span><br></span>
+</pre>
+    </div>
+</div>

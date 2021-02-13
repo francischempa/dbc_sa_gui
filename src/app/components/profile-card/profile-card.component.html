@@ -1,161 +1,47 @@
-<div class="container emp-profile">
-    <form method="post">
+<div class="container emp-profile row">
+    <div class="col-3">
         <div class="row">
-            <div class="col-md-4">
-                <div class="profile-img">
-                    <img src="https://divinebaptist.website/churchcrm/api/person/2/photo" alt=""/>
-<!--                    <div class="file btn btn-lg btn-primary">-->
-<!--                        Change Photo-->
-<!--                        <input type="file" name="file"/>-->
-<!--                    </div>-->
+            <div class="">
+                <div class="profile-img row">
+                    <img src="http://chempa.xyz/chempa/getimage.php?per_ID={{person.per_ID}}" alt=""/>
+                </div>
+                <div class="profile-img row">
+                    <app-qrcode-card></app-qrcode-card>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="profile-head">
-                    <h5>
-                        Chempa Francis
-                    </h5>
-                    <h6>
-                        Software Engineer
-                    </h6>
-<!--                    <p class="proile-rating">RANKINGS : <span>8/10</span></p>-->
-                    <ul class="nav nav-tabs" id="myTab" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Timeline</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-    <!--            <div class="col-md-2">-->
-    <!--                <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/>-->
-    <!--            </div>-->
         </div>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="profile-work">
-                    <p>Groups</p>
-                    <a href="">Youth Ministry</a><br/>
-                    <a href="">Divine Voices</a><br/>
-                    <a href="">Young Men</a>
-                    <p>Family Members</p>
-                    <a href="">Suzanna Musah</a><br/>
-                    <a href="">Cynthia Allale</a><br/>
-                    <a href="">Justice Ayaab</a><br/>
-                </div>
-            </div>
-            <div class="col-md-8">
-                <div class="tab-content profile-tab" id="myTabContent">
-                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label>User Id</label>
-                            </div>
-                            <div class="col-md-6">
-                                <p>Kshiti123</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label>Name</label>
-                            </div>
-                            <div class="col-md-6">
-                                <p>Kshiti Ghelani</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label>Email</label>
-                            </div>
-                            <div class="col-md-6">
-                                <p>kshitighelani@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label>Phone</label>
-                            </div>
-                            <div class="col-md-6">
-                                <p>123 456 7890</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label>Profession</label>
-                            </div>
-                            <div class="col-md-6">
-                                <p>Web Developer and Designer</p>
-                            </div>
-                        </div>
-                        <form class="row">
+    </div>
+    <div class="col-9">
+        <div class="row bg-light" style="height: 90Vh; border-left: 10px solid white;">
+            <pre>
 
-                            <div class="col-md-12">
-                                <label class="text-danger">Covid-19 Protocol</label>
-                            </div>
-                            <div class="col-md-6">
-                                <label>Temperature</label>
-                            </div>
-                            <div class="col-md-6">
-                                <input type="number">
-                            </div>
-                            <div class="col-md-6">
-                                <button type="button" class="btn btn-primary btn-sm rounded-0">Check in</button>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label>Experience</label>
-                            </div>
-                            <div class="col-md-6">
-                                <p>Expert</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label>Hourly Rate</label>
-                            </div>
-                            <div class="col-md-6">
-                                <p>10$/hr</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label>Total Projects</label>
-                            </div>
-                            <div class="col-md-6">
-                                <p>230</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label>English Level</label>
-                            </div>
-                            <div class="col-md-6">
-                                <p>Expert</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label>Availability</label>
-                            </div>
-                            <div class="col-md-6">
-                                <p>6 months</p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <label>Your Bio</label><br/>
-                                <p>Your detail description</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <b>Person Details</b>
+    <i class="text-secondary">Title:</i>            {{person.per_Title}}
+    <i class="text-secondary">First name:</i>       {{person.per_FirstName}}
+    <i class="text-secondary">Middle name:</i>      {{person.per_MiddleName}}
+    <i class="text-secondary">Last name:</i>        {{person.per_LastName}}
+    <i class="text-secondary">Gender:</i>           {{person.per_ID != null? person.per_Gender=='1'?'Male':'Female': ""}}
+    <i class="text-secondary">Birth Date:</i>       {{person.per_ID != null? (person.per_BirthDay+ "-" + person.per_BirthMonth + "-" + person.per_BirthYear) : ""}}<i class="text-secondary">(d-m-yyyy)</i>
+    <i class="text-secondary">Phone:</i>            {{person.per_CellPhone}}
+    <i class="text-secondary">Email:</i>            {{person.per_Email}}
+    <i class="text-secondary">Country:</i>          {{person.per_Country}}
+    <i class="text-secondary">Membership Date:</i>  {{person.per_MembershipDate}}
+    <i class="text-secondary">Address:</i>          {{person.per_Address1}}
+    <i class="text-secondary">City:</i>             {{person.per_City}}
+    <i class="text-secondary">Facebook ID:</i>      {{person.per_FacebookID}}
+
+    <b class="text-danger">Covid 19 Protocols</b> <form><div class="input-group mb-3 pl-4">
+          <input [(ngModel)]="temperature" type="number" name="temperature" class="form-control" placeholder="Temperature" aria-label="Recipient's username" aria-describedby="basic-addon2">
+          <div class="input-group-append">
+            <button class="btn btn-primary" type="button" (click)="checkInClicked()">Check in</button>
+          </div>
         </div>
     </form>
+</pre>
+        </div>
+    </div>
+<!--    <div class="col-0">-->
+<!--        <div class="row bg-light" style="height: 100Vh; border-left: 10px solid white"></div>-->
+<!--    </div>-->
 </div>
 

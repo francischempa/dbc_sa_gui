@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {GeneralPubSubService} from "../../services/shared/general-pub-sub.service";
+import {GeneralWebService} from "../../services/general-web.service";
+import {Person} from "../../interfaces/Person";
+import {ToastrService} from "ngx-toastr";
 
 @Component({
   selector: 'app-qrcode-scanner-card',
@@ -11,7 +14,9 @@ export class QrcodeScannerCardComponent implements OnInit {
   qrcode: String;
 
   constructor(
-    private generalPubSubService: GeneralPubSubService
+    private generalPubSubService: GeneralPubSubService,
+    private generalWebService: GeneralWebService,
+    private notifier: ToastrService
   ) { }
 
   ngOnInit(): void {
@@ -20,10 +25,15 @@ export class QrcodeScannerCardComponent implements OnInit {
 
   scanSuccess($event: string) {
     this.qrcode = $event;
-    this.generalPubSubService.publishQrCode($event);
+    this.generalWebService.getPerson($event).subscribe( (person:Person) => {
+      this.generalPubSubService.publishPerson(person);
+      this.generalPubSubService.publishQrCode($event);
+      this.notifier.success("Welcome, " + (person.per_Title!=null ? person.per_Title : "") + " " + person.per_FirstName, "Success")
+    })
+
   }
 
   camerasNotFound($event: any) {
-    console.log("No camera found")
+    this.notifier.error("Not Camera found", "Error")
   }
 }

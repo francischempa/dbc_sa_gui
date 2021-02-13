@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {GeneralPubSubService} from "../../services/shared/general-pub-sub.service";
+import {ToastrService} from "ngx-toastr";
 
 @Component({
   selector: 'app-qrcode-card',
@@ -11,7 +12,8 @@ export class QrcodeCardComponent implements OnInit {
   qrdata: String;
 
   constructor(
-    private generalPubSubService: GeneralPubSubService
+    private generalPubSubService: GeneralPubSubService,
+    private notifier: ToastrService
   ) { }
 
   ngOnInit(): void {

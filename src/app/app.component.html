@@ -1,83 +1,27 @@
-<div class="container-fluid row" style="height: 100vh;width: 100vw">
-    <div class="col-md-3 bg-dark" style="height: 100vh"  >
-        <div class="col-12 " style="height: 50px;"><h3 class="font-weight-bold text-light text-center pt-3">DBC Register</h3></div>
-        <hr class="mt-3 ">
-        <div class="col-12 px-4 pt-3">
+<div class="container-fluid row" style="height: 100vh;width: 100vw; overflow-y: hidden">
+    <div class="col-md-3" style="height: 100vh; border-right: 4px solid darkblue;"  >
+        <div class="row">
+            <img style="width: 100%;" src="assets/logo.png">
+        </div>
+        <hr class="row">
+        <div class="row">
             <app-qrcode-scanner-card></app-qrcode-scanner-card>
         </div>
-        <div class="col-12 text-center mt-3">
-            <app-qrcode-card></app-qrcode-card>
+        <div class="row">
+<pre class="pt-3">
+    <b class="text-primary">QR Code Scanner</b>
+
+
+    <b>Scan a QR code</b>
+    Focus the camera on the
+    QR code <i class="text-danger">(ID card)</i>
+    <a class="text-primary" (click)="showStatistics()" href="#">Statistics</a>
+    <a class="text-primary" (click)="showProfile()" href="#">Profile</a>
+</pre>
         </div>
     </div>
-    <div class="col-md-7">
-        <app-profile-card></app-profile-card>
-    </div>
-    <div class="col-md-2 bg-dark text-center">
-        <table class="table table-sm table-dark">
-            <thead>
-            <tr>
-                <th scope="col">Groups</th>
-                <th scope="col">Checked</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>Women Ministry</td>
-                <td>12</td>
-            </tr>
-            <tr>
-                <td>Men Ministry</td>
-                <td>12</td>
-            </tr>
-            <tr>
-                <td>Youth Ministry</td>
-                <td>12</td>
-            </tr>
-            <tr>
-                <td>Children Ministry</td>
-                <td>12</td>
-            </tr>
-            <tr>
-                <td>Music Ministry</td>
-                <td>12</td>
-            </tr>
-            <tr>
-                <td>Music Ministry</td>
-                <td>12</td>
-            </tr>
-            <tr>
-                <td>Music Ministry</td>
-                <td>12</td>
-            </tr>
-            <tr>
-                <td>Music Ministry</td>
-                <td>12</td>
-            </tr>
-            <tr>
-                <td>Music Ministry</td>
-                <td>12</td>
-            </tr>
-            <tr>
-                <td>Music Ministry</td>
-                <td>12</td>
-            </tr>
-            <tr>
-                <td>Music Ministry</td>
-                <td>12</td>
-            </tr>
-            <tr>
-                <td>Music Ministry</td>
-                <td>12</td>
-            </tr>
-            <tr>
-                <td>Music Ministry</td>
-                <td>12</td>
-            </tr>
-            <tr>
-                <td>Music Ministry</td>
-                <td>12</td>
-            </tr>
-            </tbody>
-        </table>
+    <div class="col-md-9 p-4">
+        <app-profile-card [hidden]="hide_profile_card"></app-profile-card>
+        <app-statistics-card [hidden]="hide_statistics_card"></app-statistics-card>
     </div>
 </div>
