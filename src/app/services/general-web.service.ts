@@ -9,7 +9,7 @@ import {map} from "rxjs/operators";
 })
 export class GeneralWebService {
 
-  public readonly BASE_URL = "http://chempa.xyz/chempa/";
+  public readonly BASE_URL = "https://divinebaptist.website/chempa/";
 
   public readonly GET_USER = "getuser.php"; // per_qrcode
   public readonly GET_USERS = "getusers.php"; //
