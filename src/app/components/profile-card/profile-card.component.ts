@@ -66,6 +66,7 @@ export class ProfileCardComponent implements OnInit {
       if(checked){
         console.log('Checked in success');
         this.generalPubSubService.publishPersonCheckedIn();
+        this.temperature = null;
         this.notifier.success((this.person.per_Title!=null ? this.person.per_Title : "") + " "+ this.person.per_FirstName + " checked In Successfully", "Checkin Success")
       }else{
         this.notifier.error("Could not check " + (this.person.per_Title!=null ? this.person.per_Title : "") + " "+ this.person.per_FirstName + " in.", "Failed Checkin")
