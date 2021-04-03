@@ -1,0 +1,46 @@
+/* Styles for wrapping the search box */
+
+.main {
+    width: 50%;
+    margin: 50px auto;
+}
+
+/* Bootstrap 4 text input with search icon */
+
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+
+#id-card-front, #id-card-back{
+    border: 1px solid gray;
+    width: 226px;
+    height: 340px;
+    font-size: 14px;
+    position: relative;
+}
+
+#photo{
+    width: 100px;
+}
+
+#logo-bg{
+    width: 200px;
+    position: absolute;
+    bottom: 0;
+}
+
+#title{
+    font-size: 18px;
+}

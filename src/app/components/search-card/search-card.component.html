@@ -1,0 +1,49 @@
+
+<div class="row" style="height: 100vh">
+    <div class="col-4 h-100 m-0 p-0" style="overflow-y: scroll; max-height: 90vh;">
+        <div class="form-group has-search m-0">
+            <span class="fa fa-search form-control-feedback"></span>
+            <input [(ngModel)]="searchterm" (keyup)="filterNames()" type="text" class="form-control" placeholder="Search">
+        </div>
+        <ol class="mt-2">
+            <li *ngFor="let p of filtered" (click)="personClicked(p)" class="text-primary" style="cursor: pointer" >{{p.per_FirstName + " " + p.per_LastName}}</li>
+        </ol>
+    </div>
+    <div class="col" style="display: flex; flex-direction: column; justify-content: center; align-items: center">
+        <div id="id-card" class="row p-3" style="border: 1px solid grey">
+            <div id="id-card-front" class="p-3">
+<pre>
+<b>Divine Baptist Church</b>
+<b>Santasi Anyinam</b>
+<b>Membership ID</b>
+</pre>
+                <img class="card" src="https://divinebaptist.website/chempa/getimage.php?per_ID={{person.per_ID}}" id="photo">
+<pre>
+
+First Name:
+    <span><b>{{person.per_FirstName}}</b></span>
+Last Name:
+    <span><b>{{person.per_LastName}}</b></span>
+Phone:
+    <span><b>{{person.per_HomePhone}}</b></span>
+</pre>
+<img class="" style="margin-top: -50px; opacity: 0.2" id="logo-bg" src="assets/logo2.png">
+
+            </div>
+            <div id="id-card-back" class="p-3">
+                <qrcode
+                        [qrdata]="person.per_ID"
+                        [width]="width"
+                        [errorCorrectionLevel]="'M'"
+                        [elementType]="'img'"
+                        [tooltip]="qrdata"
+                ></qrcode>
+                <div class="px-4">
+                    <p>If found missing please contact 0558042000 or 0244812985</p>
+                </div>
+                <img class="" style="margin-top: -60px; opacity: 0.2" id="logo-bg" src="assets/logo2.png">
+            </div>
+        </div>
+        <button onclick="printDiv()" id="print-id-card" class="btn btn-primary mt-3">Print ID</button>
+    </div>
+</div>

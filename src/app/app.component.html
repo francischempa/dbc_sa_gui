@@ -1,5 +1,5 @@
 <div class="container-fluid row" style="height: 100vh;width: 100vw; overflow-y: hidden">
-    <div class="col-md-3" style="height: 100vh; border-right: 4px solid darkblue;"  >
+    <div class="col-md-3" style="height: 100vh; border-right: 4px solid darkblue;">
         <div class="row">
             <img style="width: 100%;" src="assets/logo.png">
         </div>
@@ -8,20 +8,23 @@
             <app-qrcode-scanner-card></app-qrcode-scanner-card>
         </div>
         <div class="row">
-<pre class="pt-3">
-    <b class="text-primary">QR Code Scanner</b>
-
-
-    <b>Scan a QR code</b>
-    Focus the camera on the
-    QR code <i class="text-danger">(ID card)</i>
-    <a class="text-primary" (click)="showStatistics()" href="#">Statistics</a>
-    <a class="text-primary" (click)="showProfile()" href="#">Profile</a>
-</pre>
+            <p class="pt-3 px-3">
+                <b class="text-primary">QR Code Scanner</b><br>
+                <b>Scan a QR code</b><br>
+                Focus the camera on the
+                QR code <i class="text-danger"><br>(ID card)</i> <br> <br>
+                <span style="">
+                    <a class="text-primary" (click)="showStatistics()" href="#">Statistics</a>
+                    <a class="text-primary mx-3" (click)="showProfile()" href="#">Profile</a>
+                    <a class="text-primary" (click)="showSearch()" href="#">Cards</a>
+                </span>
+            </p>
         </div>
     </div>
     <div class="col-md-9 p-4">
         <app-profile-card [hidden]="hide_profile_card"></app-profile-card>
         <app-statistics-card [hidden]="hide_statistics_card"></app-statistics-card>
+        <app-search-card [hidden]="hide_search_card"></app-search-card>
     </div>
 </div>
+

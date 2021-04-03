@@ -14,6 +14,7 @@ import {ChartsModule} from "ng2-charts";
 import {FormsModule} from "@angular/forms";
 import {ToastrModule} from "ngx-toastr";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { SearchCardComponent } from './components/search-card/search-card.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     QrcodeScannerCardComponent,
     QrcodeCardComponent,
     ProfileCardComponent,
-    StatisticsCardComponent
+    StatisticsCardComponent,
+    SearchCardComponent
   ],
   imports: [
     BrowserModule,
