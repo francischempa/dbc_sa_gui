@@ -1,4 +1,10 @@
 /* Styles for wrapping the search box */
+.p-abs{
+    position: absolute;
+}
+.p-rel{
+    position: relative;
+}
 
 .main {
     width: 50%;
@@ -31,8 +37,72 @@
     position: relative;
 }
 
-#photo{
+#addr{
+    width: 226px;
+    font-size: 8px;
+    margin-left: -28px;
+    font-weight: bold;
+    margin-top: -10px;
+}
+
+.title-1{
+    /*margin-left: 35px;*/
+    margin-left: 35px;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+.dbc{
+    width: 35px;
+    left: 10px;
+    margin-top: 3px;
+}
+
+.gbc{
+    margin-top: -4px;
+    right: 10px;
+    width: 30px;
+}
+
+.label{
+}
+
+#fn-label{
+    margin-top: 180px;
+    margin-left: 40px;
+}
+
+#fn-value{
+    margin-top: 198px;
+    margin-left: 40px;
+}
+
+#ln-label{
+    margin-top: 217px;
+    margin-left: 40px;
+}
+
+#ln-value{
+    margin-top: 234px;
+    margin-left: 40px;
+}
+
+#ph-label{
+    margin-top: 254px;
+    margin-left: 40px;
+}
+
+#ph-value{
+    margin-top: 271px;
+    margin-left: 40px;
+}
+
+
+
+.photo{
     width: 100px;
+    margin-top: 70px;
+    margin-left: 45px;
 }
 
 #logo-bg{

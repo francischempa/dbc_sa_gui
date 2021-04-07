@@ -12,22 +12,19 @@
     <div class="col" style="display: flex; flex-direction: column; justify-content: center; align-items: center">
         <div id="id-card" class="row p-3" style="border: 1px solid grey">
             <div id="id-card-front" class="p-3">
-<pre>
-<b>Divine Baptist Church</b>
-<b>Santasi Anyinam</b>
-<b>Membership ID</b>
-</pre>
-                <img class="card" src="https://divinebaptist.website/chempa/getimage.php?per_ID={{person.per_ID}}" id="photo">
-<pre>
 
-First Name:
-    <span><b>{{person.per_FirstName}}</b></span>
-Last Name:
-    <span><b>{{person.per_LastName}}</b></span>
-Phone:
-    <span><b>{{person.per_HomePhone}}</b></span>
-</pre>
-<img class="" style="margin-top: -50px; opacity: 0.2" id="logo-bg" src="assets/logo2.png">
+<!--                <img class="card" src="https://divinebaptist.website/chempa/getimage.php?per_ID={{person.per_ID}}" id="photo">-->
+                <img id="passphoto" class="card photo p-abs" src="">
+                <img class="dbc p-abs" src="./assets/dbc.png">
+                <img class="gbc p-abs" src="./assets/gbc.png">
+                <span class="p-abs title-1" style="text-align: center"><b>Divine Baptist</b></span>
+                <span class="p-abs title-1 pt-3 pl-4" style="text-align: center"><b>Church</b></span>
+                <span class="p-abs text-secondary" id="fn-label">First Name:</span>
+                <span class="p-abs" id="fn-value"><b>{{person.per_FirstName}}</b></span>
+                <span class="p-abs text-secondary" id="ln-label">Last Name:</span>
+                <span class="p-abs" id="ln-value"><b>{{person.per_LastName}}</b></span>
+                <span class="p-abs text-secondary" id="ph-label">Phone:</span>
+                <span class="p-abs" id="ph-value"><b>{{person.per_HomePhone}}</b></span>
 
             </div>
             <div id="id-card-back" class="p-3">
@@ -40,8 +37,15 @@ Phone:
                 ></qrcode>
                 <div class="px-4">
                     <p>If found missing please contact 0558042000 or 0244812985</p>
+<pre id="addr">
+<i>Address</i>
+Divine Baptist Church
+P.O.Box 5513
+Kumasi
+(Loc. Behind Nagies Angels Edu. Comp.)
+</pre>
                 </div>
-                <img class="" style="margin-top: -60px; opacity: 0.2" id="logo-bg" src="assets/logo2.png">
+                <img class="" style="margin-top: -60px; opacity: 0.2; z-index: -1000;" id="logo-bg" src="assets/logo2.png">
             </div>
         </div>
         <button onclick="printDiv()" id="print-id-card" class="btn btn-primary mt-3">Print ID</button>

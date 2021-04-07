@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {GeneralWebService} from "../../services/general-web.service";
 
+declare function imgUpdated(): any;
+
 @Component({
   selector: 'app-search-card',
   templateUrl: './search-card.component.html',
@@ -12,12 +14,13 @@ export class SearchCardComponent implements OnInit {
     ALL=[];
     filtered=[];
     person = {
-        per_ID:"",
+        per_ID:"1",
         per_FirstName:"",
         per_LastName:"",
         per_HomePhone:""
     };
     searchterm: string;
+    passimg: any;
 
   constructor(
       private generalWebService: GeneralWebService
@@ -27,12 +30,16 @@ export class SearchCardComponent implements OnInit {
         this.generalWebService.getPersons().subscribe(value => {
            this.ALL = value;
            this.filtered = this.ALL;
-           // console.log(this.filtered);
         });
   }
 
     personClicked(person):void {
         this.person = person;
+        var badImage = document.getElementById("passphoto")
+        const parent = badImage.parentElement;
+        parent.removeChild(badImage);
+        badImage.setAttribute("src","https://divinebaptist.website/chempa/getimage.php?per_ID=" + person.per_ID);
+        parent.appendChild(badImage);
     }
 
     filterNames() {

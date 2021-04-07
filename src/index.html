@@ -26,6 +26,13 @@
             });
         }
 
+        function imgUpdated() {
+          const el = document.getElementById("passphoto");
+          const realSrc = el.src
+          el.src = 'about:blank'
+          setTimeout(() => { el.src = realSrc }, 0)
+        }
+
     </script>
 </head>
 <body>
