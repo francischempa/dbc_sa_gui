@@ -26,7 +26,7 @@ export class AppComponent  implements OnInit{
       this.showProfile();
       }
     });
-    // this.showSearch();
+    //this.showSearch();
   }
 
   showStatistics() {

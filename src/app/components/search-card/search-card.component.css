@@ -38,11 +38,12 @@
 }
 
 #addr{
+    height: 50px;
     width: 226px;
-    font-size: 8px;
+    font-size: 9px;
     margin-left: -28px;
     font-weight: bold;
-    margin-top: -10px;
+    /*margin-top: -10px;*/
 }
 
 .title-1{
@@ -50,6 +51,12 @@
     margin-left: 35px;
     font-weight: bold;
     font-size: 19px;
+}
+
+.loc{
+    margin-top: 38px;
+    margin-left: 35px;
+    font-size: 15px;
 }
 
 .dbc{
@@ -114,3 +121,4 @@
 #title{
     font-size: 18px;
 }
+
