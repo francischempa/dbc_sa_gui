@@ -33,9 +33,26 @@
           setTimeout(() => { el.src = realSrc }, 0)
         }
 
+        function isMobile() {
+          var match = window.matchMedia || window.msMatchMedia;
+          if(match) {
+            var mq = match("(pointer:coarse)");
+            return mq.matches;
+          }
+          return false;
+        }
+
+        function checkMobility(){
+          if(isMobile()){
+            window.location.replace("https://regdbc.herokuapp.com");
+          }else{
+
+          }
+        }
+
     </script>
 </head>
-<body>
+<body onload="checkMobility()">
   <app-root></app-root>
 </body>
 </html>
